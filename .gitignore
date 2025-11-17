@@ -1,0 +1,11 @@
+# Pasta de build do Maven
+/target/
+
+# Arquivos de workspace do Eclipse
+.metadata/
+.classpath
+.project
+.settings/
+
+# Arquivos de log
+*.log
