@@ -18,7 +18,7 @@
  * ("jdbc:mysql://localhost:3306/appconecta?useTimezone=true&serverTimezone=UTC"
  * ); dataSource.setUsername("root"); dataSource.setPassword("root"); return
  * dataSource;
- * z
+ * 
  * }
  * 
  * @Bean public JpaVendorAdapter jpaVendorAdapter() { HibernateJpaVendorAdapter
