@@ -1,4 +1,3 @@
-# --- ESTÁGIO 1: O "CONSTRUTOR" (Build) ---
 FROM maven:3.9-eclipse-temurin-21 AS builder
 WORKDIR /app
 COPY pom.xml .
@@ -11,8 +10,8 @@ FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 
 # ---- A MUDANÇA ESTÁ AQUI ----
-# Seja explícito sobre qual .jar copiar
-COPY --from=builder /app/target/appConecta-0.0.1-SNAPSHOT.jar app.jar
+# Nós copiamos o JAR com o nome do projeto CORRETO
+COPY --from=builder /app/target/API-conectaAtleta-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/app.jar"]
