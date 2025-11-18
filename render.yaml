@@ -11,7 +11,7 @@ services:
     plan: free
     envVars:
       - key: JPA_DIALECT
-        value: org.hibernate.dialect.PostgreSQLDialect
+        value: org.hibernate.dialect.H2Dialect
 
 # Note: do NOT put secrets (DB credentials) in this file. After the service is created
 # in Render, set the `DATABASE_URL` environment variable in the Render dashboard.

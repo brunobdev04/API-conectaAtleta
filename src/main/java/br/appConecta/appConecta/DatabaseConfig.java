@@ -52,6 +52,16 @@ public class DatabaseConfig {
                 ds.setDriverClassName("org.postgresql.Driver");
                 if (user != null) ds.setUsername(user);
                 if (pass != null) ds.setPassword(pass);
+                // Also set persistence and dialect properties so Hibernate can determine the
+                // dialect even if it attempts to bootstrap before JDBC metadata is available.
+                try {
+                    System.setProperty("jakarta.persistence.jdbc.url", jdbcWithParams.toString());
+                    System.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+                    logger.info("Set system properties for JDBC URL and Hibernate dialect for Postgres");
+                } catch (Exception ex) {
+                    logger.warn("Unable to set system properties for JDBC/dialect: {}", ex.getMessage());
+                }
+
                 logger.info("Configured DataSource from DATABASE_URL (postgres URI)");
                 return ds;
             }
