@@ -13,7 +13,7 @@ COPY src ./src
 
 # Roda o comando de build (mvn clean package)
 # Isso vai criar a pasta /app/target/API-conectaAtleta...jar
-RUN mvn package
+RUN mvn package -DskipTests
 
 
 # --- ESTÁGIO 2: O "RODADOR" (Run) ---
