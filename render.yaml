@@ -1,3 +1,31 @@
+# Render manifest (example). Adjust region/plan/repo/service names before applying.
+# This file is a starter to help deploy on Render using their YAML spec.
+
+services:
+  - type: web
+    name: appconecta-web
+    env: docker
+    repo: https://github.com/brunobdev04/API-conectaAtleta
+    branch: main
+    dockerfilePath: Dockerfile
+    plan: free
+    envVars:
+      - key: JPA_DIALECT
+        value: org.hibernate.dialect.PostgreSQLDialect
+
+# Note: do NOT put secrets (DB credentials) in this file. After the service is created
+# in Render, set the `DATABASE_URL` environment variable in the Render dashboard.
+# Render provides a managed Postgres; it will give you a URI like:
+#   postgres://user:pass@host:5432/dbname
+# Your app expects JDBC. You can either:
+#  - set DATABASE_URL to the JDBC form:
+#      jdbc:postgresql://host:5432/dbname?user=user&password=pass
+#  - OR set DATABASE_URL to the postgres:// form — the app will auto-convert it.
+
+databases:
+  - name: appconecta-db
+    type: postgres
+    plan: starter
 # Basic render.yaml to create a Web Service and a Postgres database on Render
 # NOTE: adjust fields (region, plan, repo) to match your Render account and preferences.
 
