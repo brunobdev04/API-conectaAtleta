@@ -1,6 +1,6 @@
 # 🏅 API Cadastro - Conecta Atleta 
 
-![Logo Conecta Atleta](img/logoConectaAtleta.png)
+### ☕Aceese o site!!
 
 🔗 [Acesse o deploy do site](https://amanda-scarvalho.github.io/Projeto-Integrador/)
 
