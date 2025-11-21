@@ -1,6 +1,6 @@
 # 🏅 API Cadastro - Conecta Atleta 
 
-### ☕Aceese o site!!
+### ☕Acesse o site!!
 
 🔗 [Acesse o deploy do site](https://amanda-scarvalho.github.io/Projeto-Integrador/)
 
@@ -39,7 +39,7 @@ Ser a plataforma líder na **conexão entre atletas e patrocinadores**, proporci
 
 ## 👥 Equipe
 
-* Amanda Carvalho
-* Bruno Brito
-* Juliana Melo
+* Amanda Carvalho  | @Amanda-SCarvalho
+* Bruno Brito      | @brunobdev04
+* Juliana Melo     |
 ---
